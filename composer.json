@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.3",
-        "ext-cassandra": "*",
+        "ext-cassandra": "*"
     },
     "autoload": {
         "psr-4": {
