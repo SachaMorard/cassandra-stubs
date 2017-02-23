@@ -1,0 +1,25 @@
+{
+    "name": "sachoo/cassandra-stubs",
+    "type": "library",
+    "description": "PHP stubs for the php cassandra extension.",
+    "license": "MIT",
+    "keywords": [
+        "cassandra",
+        "nosql",
+        "database",
+        "driver",
+        "datastax",
+        "stubs"
+    ],
+    "require": {
+        "php": ">=5.3",
+        "ext-cassandra": "*",
+    },
+    "autoload": {
+        "psr-4": {
+            "Phalcon\\": [
+                "Library/"
+            ]
+        }
+    }
+}
