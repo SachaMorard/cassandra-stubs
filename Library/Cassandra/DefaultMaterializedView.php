@@ -19,193 +19,201 @@
 namespace Cassandra;
 
 /**
- * A PHP representation of a table
+ * A PHP representation of a materialized view
  */
-interface Table {
+final class DefaultMaterializedView extends MaterializedView  {
 
     /**
-     * Returns the name of this table
+     * {@inheritDoc}
      *
-     * @return string Name of the table
+     * @return string Name of the view
      */
-    public function name();
+    public function name() { }
 
     /**
-     * Return a table's option by name
+     * {@inheritDoc}
      *
-     * @param string $name The name of the option
+     * @param string $name {@inheritDoc}
      *
      * @return Value Value of an option by name
      */
-    public function option($name);
+    public function option($name) { }
 
     /**
-     * Returns all the table's options
-     *               view's options.
+     * {@inheritDoc}
      *
-     * @return array A dictionary of `string` and `Value` pairs of the
+     * @return array A dictionary of string and Value pairs of the
      */
-    public function options();
+    public function options() { }
 
     /**
-     * Description of the table, if any
+     * {@inheritDoc}
      *
      * @return string Table description or null
      */
-    public function comment();
+    public function comment() { }
 
     /**
-     * Returns read repair chance
+     * {@inheritDoc}
      *
      * @return float Read repair chance
      */
-    public function readRepairChance();
+    public function readRepairChance() { }
 
     /**
-     * Returns local read repair chance
+     * {@inheritDoc}
      *
      * @return float Local read repair chance
      */
-    public function localReadRepairChance();
+    public function localReadRepairChance() { }
 
     /**
-     * Returns GC grace seconds
+     * {@inheritDoc}
      *
      * @return int GC grace seconds
      */
-    public function gcGraceSeconds();
+    public function gcGraceSeconds() { }
 
     /**
-     * Returns caching options
+     * {@inheritDoc}
      *
      * @return string Caching options
      */
-    public function caching();
+    public function caching() { }
 
     /**
-     * Returns bloom filter FP chance
+     * {@inheritDoc}
      *
      * @return float Bloom filter FP chance
      */
-    public function bloomFilterFPChance();
+    public function bloomFilterFPChance() { }
 
     /**
-     * Returns memtable flush period in milliseconds
+     * {@inheritDoc}
      *
      * @return int Memtable flush period in milliseconds
      */
-    public function memtableFlushPeriodMs();
+    public function memtableFlushPeriodMs() { }
 
     /**
-     * Returns default TTL.
+     * {@inheritDoc}
      *
      * @return int Default TTL.
      */
-    public function defaultTTL();
+    public function defaultTTL() { }
 
     /**
-     * Returns speculative retry.
+     * {@inheritDoc}
      *
      * @return string Speculative retry.
      */
-    public function speculativeRetry();
+    public function speculativeRetry() { }
 
     /**
-     * Returns index interval
+     * {@inheritDoc}
      *
      * @return int Index interval
      */
-    public function indexInterval();
+    public function indexInterval() { }
 
     /**
-     * Returns compaction strategy class name
+     * {@inheritDoc}
      *
      * @return string Compaction strategy class name
      */
-    public function compactionStrategyClassName();
+    public function compactionStrategyClassName() { }
 
     /**
-     * Returns compaction strategy options
+     * {@inheritDoc}
      *
      * @return Map Compaction strategy options
      */
-    public function compactionStrategyOptions();
+    public function compactionStrategyOptions() { }
 
     /**
-     * Returns compression parameters
+     * {@inheritDoc}
      *
      * @return Map Compression parameters
      */
-    public function compressionParameters();
+    public function compressionParameters() { }
 
     /**
-     * Returns whether or not the `populate_io_cache_on_flush` is true
+     * {@inheritDoc}
      *
      * @return bool Value of `populate_io_cache_on_flush` or null
      */
-    public function populateIOCacheOnFlush();
+    public function populateIOCacheOnFlush() { }
 
     /**
-     * Returns whether or not the `replicate_on_write` is true
+     * {@inheritDoc}
      *
      * @return bool Value of `replicate_on_write` or null
      */
-    public function replicateOnWrite();
+    public function replicateOnWrite() { }
 
     /**
-     * Returns the value of `max_index_interval`
+     * {@inheritDoc}
      *
      * @return int Value of `max_index_interval` or null
      */
-    public function maxIndexInterval();
+    public function maxIndexInterval() { }
 
     /**
-     * Returns the value of `min_index_interval`
+     * {@inheritDoc}
      *
      * @return int Value of `min_index_interval` or null
      */
-    public function minIndexInterval();
+    public function minIndexInterval() { }
 
     /**
-     * Returns column by name
+     * {@inheritDoc}
      *
      * @param string $name Name of the column
      *
      * @return Column Column instance
      */
-    public function column($name);
+    public function column($name) { }
 
     /**
-     * Returns all columns in this table
+     * {@inheritDoc}
      *
      * @return array A list of Column instances
      */
-    public function columns();
+    public function columns() { }
 
     /**
-     * Returns the partition key columns of the table
+     * {@inheritDoc}
      *
      * @return array A list of of Column instances
      */
-    public function partitionKey();
+    public function partitionKey() { }
 
     /**
-     * Returns both the partition and clustering key columns of the table
+     * {@inheritDoc}
      *
      * @return array A list of of Column instances
      */
-    public function primaryKey();
+    public function primaryKey() { }
 
     /**
-     * Returns the clustering key columns of the table
+     * {@inheritDoc}
      *
      * @return array A list of of Column instances
      */
-    public function clusteringKey();
+    public function clusteringKey() { }
 
     /**
+     * {@inheritDoc}
+     *
      * @return array A list of cluster column orders ('asc' and 'desc')
      */
-    public function clusteringOrder();
+    public function clusteringOrder() { }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @return Table Base table of the view
+     */
+    public function baseTable() { }
 
 }
