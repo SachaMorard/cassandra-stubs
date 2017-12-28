@@ -28,7 +28,7 @@ final class Builder {
     /**
      * Returns a Cluster Instance.
      *
-     * @return \Cluster Cluster instance
+     * @return Cassandra\Cluster Cluster instance
      */
     public function build() { }
 
