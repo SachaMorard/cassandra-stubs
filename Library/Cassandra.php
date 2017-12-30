@@ -126,14 +126,14 @@ final class Cassandra {
     /**
      * Perform no verification of nodes when using SSL encryption.
      *
-     * @see SSLOptions\Builder::withVerifyFlags()
+     * @see Cassandra\SSLOptions\Builder::withVerifyFlags()
      */
     const VERIFY_NONE = 0;
 
     /**
      * Verify presence and validity of SSL certificates.
      *
-     * @see SSLOptions\Builder::withVerifyFlags()
+     * @see Cassandra\SSLOptions\Builder::withVerifyFlags()
      */
     const VERIFY_PEER_CERT = 1;
 
@@ -142,7 +142,7 @@ final class Cassandra {
      * one of its subject alternative names. This implies the certificate is
      * also present.
      *
-     * @see SSLOptions\Builder::withVerifyFlags()
+     * @see Cassandra\SSLOptions\Builder::withVerifyFlags()
      */
     const VERIFY_PEER_IDENTITY = 2;
 
@@ -379,7 +379,7 @@ final class Cassandra {
     /**
      * The current version of the extension.
      */
-    const VERSION = '1.3.1';
+    const VERSION = '1.3.2';
 
     /**
      * The version of the cpp-driver the extension is compiled against.
@@ -396,7 +396,7 @@ final class Cassandra {
     /**
      * Creates a new ssl builder for constructing a SSLOptions object.
      *
-     * @return SSLOptions\Builder A SSL options builder with default settings
+     * @return Cassandra\SSLOptions\Builder A SSL options builder with default settings
      */
     public static function ssl() { }
 
